@@ -292,6 +292,14 @@ nav {
     color: rgb(255, 255, 255);
 }
 
+footer {
+    background: linear-gradient(to right, #0062f5 0%, #00ffff 100%);
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    color: aliceblue;
+}
+
 
 /* breakpoint */
 

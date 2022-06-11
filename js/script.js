@@ -400,3 +400,9 @@ function searchBtnMobile() {
     searchInput.classList.toggle("active");
     searchBox.classList.toggle("active");
 }
+
+const footer = document.getElementsByTagName("footer")[0];
+console.log(footer);
+const footerDate = footer.querySelector("p span");
+console.log(footerDate);
+footerDate.innerText = new Date().getFullYear();
