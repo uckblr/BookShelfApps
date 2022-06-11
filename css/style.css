@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+html,
+body {
+    font-family: Raleway, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* navbar */
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(to right, #0062f5 0%, #00ffff 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.search-box {
+    width: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-txt {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background: #f8f8fe;
+    outline: none;
+}
+
+.search-btn {
+    background-color: rgb(0, 51, 253);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+#search-result-list {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    width: 20rem;
+    position: absolute;
+    right: 1rem;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#search-result-list.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-result-item {
+    list-style-type: none;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.search-result-item>p {
+    background-color: #f8f8fe;
+    padding: 0.5rem;
+    color: rgb(108, 108, 108);
+}
+
+.search-result-item>p>b {
+    color: rgb(34, 34, 34);
+}
+
+.search-result-item>p:last-child b {
+    color: red;
+}
+
+
+/* wrapper */
+
+.wrapper {
+    width: 90vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto 0 auto;
+    padding: 2rem;
+}
+
+
+/* section input */
+
+.input_section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 0px 10px rgba(0, 25, 253, 0.116);
+}
+
+
+/* form */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(57, 59, 81);
+}
+
+.form-group input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: rgb(57, 59, 81);
+    background: #f8f8fe;
+    outline: none;
+}
+
+#checked {
+    margin-bottom: 1rem;
+}
+
+.form-group button {
+    background-color: rgb(249, 253, 0);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(62, 61, 61);
+    cursor: pointer;
+}
+
+
+/* result */
+
+.book_shelf {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 0px 10px rgba(0, 25, 253, 0.116);
+    margin-top: 1rem;
+}
+
+.input_section header,
+.book_shelf header {
+    background: linear-gradient(to right, #0062f5 0%, #00ffff 100%);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.input_section header {
+    margin-bottom: 1rem;
+}
+
+.input_section header h1,
+.input_section header p,
+.book_shelf header h2,
+.book_shelf header p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.input_section header p {
+    font-size: 1rem;
+}
+
+.book_shelf header p {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+.book_list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.book_item {
+    width: 30%;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #f8f8fe;
+}
+
+.check-button,
+.undo-button,
+.trash-button {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: rgb(62, 61, 61);
+    cursor: pointer;
+}
+
+.check-button {
+    background-color: rgb(0, 253, 253);
+}
+
+.undo-button {
+    background-color: rgb(249, 253, 0);
+}
+
+.trash-button {
+    background-color: rgb(253, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#read,
+#unread,
+#add-new-book {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    color: rgb(22, 23, 49);
+    margin: 0.5rem 0 1rem 0;
+}
+
+#add-new-book {
+    margin: -0.8rem 0 0 0;
+}
+
+#read.done,
+#add-new-book.done {
+    background-color: rgb(0, 255, 162);
+}
+
+#unread.undo {
+    background-color: rgb(249, 253, 0);
+}
+
+#read.deleted,
+#unread.deleted {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+/* breakpoint */
+
+@media only screen and (max-width: 1024px) {
+    .search-txt {
+        display: none;
+    }
+    .search-txt.active {
+        display: block;
+    }
+    .search-box {
+        width: auto;
+    }
+    .search-box.active {
+        width: 20rem;
+        position: absolute;
+    }
+    #search-result-list {
+        left: 2rem;
+    }
+    .wrapper {
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .book_item {
+        width: 100%;
+    }
+    .input_section header p {
+        font-size: 0.8rem;
+    }
+}

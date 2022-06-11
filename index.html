@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="nav-title">Bookshelf Apps</h1>
+            <div class="search-box">
+                <input type="text" id="search-input" class="search-txt" name="search" placeholder="Cari buku">
+                <button class="search-btn" id="search-btn" type="submit">Search</button>
+        </nav>
+        <ul id="search-result-list">
+
+        </ul>
+    </header>
+    <main class="wrapper">
+        <section class="input_section">
+            <header>
+                <h1>Masukan Buku Baru</h1>
+                <p id="book_total"></p>
+            </header>
+            <span id="add-new-book"></span>
+
+            <form action="#" id="add">
+                <div class="form-group">
+                    <label for="title">Judul Buku</label>
+                    <input type="text" id="title" name="title" class="form-control" placeholder="Judul Buku" required/>
+                </div>
+                <div class="form-group">
+                    <label for="writer">Penulis</label>
+                    <input type="text" id="writer" name="writer" class="form-control" placeholder="penulis" required/>
+                </div>
+                <div class="form-group">
+                    <label for="year">Tahun Terbit</label>
+                    <input type="number" id="year" name="year" class="form-control" placeholder="Tahun Terbit" required/>
+                </div>
+                <div class="form-group">
+                    <div class="check">
+                        <label>Selesai dibaca</label>
+                        <input type="checkbox" name="selesai" id="checked" class="form-control" placeholder="selesai" />
+                    </div>
+                    <button type="submit" di="submit" value="Submit" name="Submit" class="btn btn-primary">Simpan</button>
+                </div>
+        </section>
+        <section class="book_shelf" id="book_shelf">
+            <header>
+                <h2>Belum selesai dibaca</h2>
+                <p id="uncomplete"></p>
+            </header>
+            <span id="read"></span>
+
+
+            <div id="incompleteBookshelfList" class="book_list">
+            </div>
+        </section>
+
+        <section class="book_shelf" id="book_shelf">
+            <header>
+                <h2>Selesai dibaca</h2>
+                <p id="complete"></p>
+            </header>
+            <span id="unread"></span>
+
+            <div id="completeBookshelfList" class="book_list">
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
